@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: hsl(50, 74%, 83%);
+    font-size: 60px;
+    text-align: center;
+    z-index: 2;
+}
+
+
+.snow-container {
+    background-image: url("images/snowfall.jpg");
+    /* background-image: url("images/81YUoK6YS2L._AC_SX679_ (1).jpg"); */
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.snow-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.snow {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: snowFall 15s linear;
+    z-index: 2;
+    /* width: 20px; */
+    /* height: 20px; */
+}
+
+@keyframes snowFall {
+    0% {
+        opacity: 0;
+        top: 0;
+        transform: translate(5px);
+    }
+    10% {
+        opacity: 1;
+        transform: translate(-5px);        
+    }
+    20% {
+        opacity: 1;
+        transform: translate(5px);        
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-5px);        
+    }
+    40% {
+        opacity: 1;
+        transform: translate(5px);        
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-5px);        
+    }
+    60% {
+        opacity: 1;
+        transform: translate(5px);        
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-5px);        
+    }
+    80% {
+        opacity: 1;
+        transform: translate(5px);        
+    }
+    90% {
+        opacity: 1;
+        transform: translate(-5px);        
+    }
+    100% {
+        opacity: 0;
+        top: 100vh;
+    }
+}
